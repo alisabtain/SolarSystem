@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 860a66ca4259b384f9ec01b687f71c3c, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.04605542, g: 0.043348372, b: 0.047511123, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -533,8 +533,6 @@ GameObject:
   - component: {fileID: 492551838}
   - component: {fileID: 492551843}
   - component: {fileID: 492551842}
-  - component: {fileID: 492551844}
-  - component: {fileID: 492551845}
   - component: {fileID: 492551846}
   m_Layer: 0
   m_Name: earth
@@ -649,30 +647,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 720423725}
   speed: 54
---- !u!114 &492551844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492551837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7ad5b019ebf54274ac2e5cc08da1db8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &492551845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492551837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5889d65344b1746c3bcbfdbb50fc41f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &492551846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,6 +671,8 @@ GameObject:
   - component: {fileID: 519980567}
   - component: {fileID: 519980569}
   - component: {fileID: 519980568}
+  - component: {fileID: 519980572}
+  - component: {fileID: 519980570}
   m_Layer: 0
   m_Name: Earthtext
   m_TagString: Untagged
@@ -711,9 +687,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519980566}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.14000034, y: 0.69600004, z: -0.027999878}
-  m_LocalScale: {x: 0.078746244, y: 0.10923517, z: 4}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.561, y: 0.90000004, z: 0.013000011}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 492551841}
   m_RootOrder: 1
@@ -781,6 +757,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &519980570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519980566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec842142da5443c8bc08b25c66ac2f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 519980567}
+  speed: 0
+--- !u!114 &519980572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519980566}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec8bfb3ffeec4f7595557551fc2f65f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xi: 0
+  yi: -110
+  zi: 0
 --- !u!1001 &540366385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1222,7 +1227,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720423721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5889d65344b1746c3bcbfdbb50fc41f7, type: 3}
   m_Name: 
@@ -1780,7 +1785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.07, y: 0.29, z: -4.93}
+  m_LocalPosition: {x: 2.06, y: 0.29, z: -4.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
