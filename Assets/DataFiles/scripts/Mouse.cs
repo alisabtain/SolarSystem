@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Mouse : MonoBehaviour
 {
-    private GameObject activeGameobject;
+    public float movespeed = 35.0f;
+    public float minimumDistanceFromTarget = 5f;
+    public GameObject targetobject;
+    private bool movingtowardstarget = false;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +18,29 @@ public class Mouse : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        activeGameobject = Camera.main.gameObject;
-        Debug.Log("you clicked mouse");
+        if (Input.GetMouseButtonDown(1))
+        {
+            if(movingtowardstarget == true)
+            {
+                movingtowardstarget = false;
+
+            }
+            else
+            {
+                movingtowardstarget = true;
+            }
+        }
     }
-}
+
+    public void movetowardstarget(GameObject target)
+    {
+        if (Vector3.Distance(transform.position, target.transform.position) > minimumDistanceFromTarget)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, movespeed * Time.deltaTime);
+        } else
+        {
+            movingtowardstarget = false;
+
+        }
+    }
+}       

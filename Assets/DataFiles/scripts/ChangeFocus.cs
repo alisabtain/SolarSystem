@@ -15,6 +15,5 @@ public class ChangeFocus : MonoBehaviour
         Camera.main.fieldOfView = Mathf.Clamp(60 * target.transform.localScale.x, 1, 100);
 
 
-
     }
 }
